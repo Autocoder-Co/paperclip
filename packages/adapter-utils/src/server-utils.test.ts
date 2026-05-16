@@ -455,8 +455,12 @@ describe("renderPaperclipWakePrompt", () => {
     });
 
     expect(prompt).toContain("## Paperclip Wake Payload");
-    expect(prompt).toContain("Execution contract: take concrete action in this heartbeat");
+    expect(prompt).toContain("Paperclip issue-state contract");
+    expect(prompt).toContain("governs Paperclip issue state, liveness, and routing mechanics only");
+    expect(prompt).toContain("follow the agent, company, repo, and issue instructions for methodology");
+    expect(prompt).toContain("Handle actionable wake work in this heartbeat when those instructions and gates allow it");
     expect(prompt).toContain("clear final disposition");
+    expect(prompt).not.toContain("do not stop at a plan unless planning was requested");
     expect(prompt).toContain("evidence, not valid liveness paths by themselves");
     expect(prompt).toContain("Use child issues for long or parallel delegated work instead of polling");
     expect(prompt).toContain("named unblock owner/action");
